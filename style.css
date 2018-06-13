@@ -1,8 +1,594 @@
+body{
+  /*background-image: url(https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1);
+
+
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+*/
+height: 500px;
+background: #1b2838;
+
+
+}
+
+
+
+#fake_body {
+  max-width: 72vw;
+  margin:0 auto;
+margin-top:100px;
+
+}
+p::selection {
+background-color: gold;
+color: #111;
+}
+
+h1::selection {
+background-color: gold;
+color: #111;
+}
+
+h2::selection {
+background-color: gold;
+color: #111;
+}
+
+h2#con{
+  border-bottom: 0;
+}
+
+
+a::selection {
+background-color: gold;
+color: rgb(139,0,139);
+
+}
+
+p {
+  max-width: 68vw;
+  margin:0 auto;
+
+}
+
+.link_azzurro {
+color: #67c1f5 !important;
+}
+
+
+
+
+
+.parallax {
+}
+
+.scritteindice a {             /*TUTTI GLI a CONTENUTI(DISCENDENTI) DA UN OGGETTO CON CLASSE scritteindice*/
+text-decoration: none;
+color:#939393;
+}
+
+.scritteindice_attivo a:hover {
+text-decoration: none;
+color:#ffffff;
+}
+
+a.link_testo {
+text-decoration: none;
+color: rgb(70, 130, 180);
+border-bottom: 1px solid #eee;
+transition: border-bottom-color 0.15s ease-in-out;
+}
+
+a.link_testo:hover {
+
+
+border-bottom-color: rgb(70, 130, 180);
+}
+
+
 h1 {
-color:yellow;
-background-color:black;
+ font-size: 7em;
+    font-family: "Akkurat Mono",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;
+    text-transform: inherit;
+    font-weight: normal;
+    padding-top:80px;
+    background-color: #eee;
+margin-left: 2vw;
+margin-right: 2vw;
+color: rgb(0, 0, 0);
+
+  padding-bottom:80px;
+  margin-bottom: 0;
 }
 h2 {
-  color:white;
-  background-color:black
+  font-family: "Akkurat Mono",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: normal;
+
+  margin-left: 2vw;
+  margin-right: 2vw;
+border-bottom: 1px solid black;
+}
+
+.gradiente_inea {
+
+
+}
+
+h2:before {
+  display: block;
+  content: " ";
+  margin-top: -130px;
+  height: 130px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+p {
+  font-family: "Akkurat Mono",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.header {
+  width: 100vw;
+  height: 62px;
+  background-color:  #171a21;
+  position: fixed;
+top: 0;
+left: 0;
+right: 0;
+color: #ffffff;
+text-align: center;
+font-size: 36px;
+box-shadow: 0 0 7px 0 rgba( 0, 0, 0, 0.75 );
+
+}
+
+.LB {
+padding:8px;
+
+}
+
+.dietro_indice {
+position: fixed;
+  width: 100vw;
+  height: 60px;
+  background-color: #223349;
+  top:60;
+  left:0;
+  right:0;
+  box-shadow: 0px 0px 7px #000000;
+}
+
+.indice_due {
+  position:fixed;
+width: 100vw;
+height: 60px;
+
+top:60;
+left:0;
+right:0;
+
+max-width: 70vw;
+margin:0 auto;
+}
+
+.indice_due_testo {
+margin:auto;
+  text-align: center;
+color: #939393;
+  font-size: 22px;
+width:100vw;
+background-color: #223349;
+margin-top:19px;
+font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+
+
+
+
+.scritteindice {
+  background-color: rgba( 0, 0, 0, 0.4 );
+  font-size:1.5rem;
+  display: inline-block;
+padding: 6px;
+padding-left:9px;
+padding-right:9px;
+border-radius: 3px;
+
+margin-left:6px;
+margin-right:6px;
+margin-top:16px;
+font-size: 14px;
+font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+.scritteindice_attivo {
+  background-color: rgb(70, 130, 180);
+  font-size:1.5rem;
+  display: inline-block;
+padding: 6px;
+padding-left:9px;
+padding-right:9px;
+border-radius: 3px;
+
+margin-left:6px;
+margin-right:6px;
+margin-top:16px;
+font-size: 14px;
+font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+.indice {
+  background-color: #eee;
+
+}
+
+.aboutme {
+
+}
+
+.portfolio {
+
+}
+
+.curriculum {
+
+}
+
+.contatti {
+
+}
+
+
+.dopoi {
+  background-color: #eee;
+  color: rgb(27, 40, 56);
+
+}
+
+.sfondo_welcome {
+  background-color: #eee
+}
+
+
+.dopoi h2 {
+border-bottom-color: #1b2838;
+
+}
+
+
+ #am {
+   margin-top: 0;
+ }
+
+ .contenitore_footer {                     /*CONTENITORE FOOTER*/
+position:relative;
+width: 100vw;
+max-width: 100%;
+padding-left:8px;
+padding-right:8px;
+
+       height: 200px;
+       background-color: #171a21;
+      bottom: 0;
+       left:0;
+       right: 0;
+transition: 0.3s height linear;
+ }
+
+ .foot {
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+
+display: inline-block;
+
+ }
+
+.subcontenitore_footer_tre{
+
+  max-width: 72vw;
+  margin:0 auto;
+width:72vw;
+text-align: left;
+
+}
+
+.subcontenitore_footer_due{
+
+  max-width: 72vw;
+  margin:0 auto;
+width:72vw;
+text-align: left;
+}
+
+.subcontenitore_footer_uno{
+  max-width: 72vw;
+  margin:0 auto;
+width: 72vw;
+text-align: left;
+}
+
+.funo{
+
+width: 35.84vw;
+height:64px;
+}
+
+.fsecondo{                          /*OLD: SINISTRA 36VW ; DESTRA 35.45VW*/
+
+
+    width: 35.84vw;
+  height: 64px;
+}
+
+.fterzo{
+position:relative;
+
+  width: 35.84vw;
+height: 64px;
+}
+
+.fdue{
+position:relative;
+
+  width: 35.84vw;
+height: 64px;
+}
+
+.ftre{
+width: 35.84vw;
+height: 64px;
+}
+
+.fquattro{
+position:relative;
+
+height: 64px;
+width: 35.84vw;
+}
+
+.lineamezzo {                                           /*LINEA MEZZO*/
+
+  margin-left: -10px;
+    margin-right: -10px;
+    height: 1px;
+    background-color: #000;
+    border-bottom: 1px solid #17212e;
+    max-width: 72vw;
+    margin:0 auto;
+  width:72vw;
+  transform: translateX()
+}
+
+.centratestofooter {
+
+}
+
+#imgpin {
+display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image:url(https://www.shareicon.net/data/512x512/2015/09/30/109349_media_512x512.png);
+border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+transform:translateY(7px);
+position:relative;
+}
+
+.sub_fsecondo{
+  transform: translateX(20%);
+}
+
+#pinterest {
+  display: inline-block;
+transform:translate(10px, -50%)
+}
+
+#imggit {
+display: inline-block;
+  width: 50px;
+  height: 50px;
+border-radius: 50%;
+background-color: white;
+  background-image:url(https://www.shareicon.net/download/2016/06/20/606578_black_256x256.png);
+transform:translateY(7px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+position:relative;
+}
+
+.sub_fquattro{
+  transform: translateX(20%);
+}
+
+#github {
+  display: inline-block;
+transform:translate(10px, -50%);
+}
+
+#imgfb {
+display: inline-block;
+  width: 50px;
+  height: 50px;
+border-radius: 50%;
+  background-image:url(https://stt.fi/wp-content/uploads/2016/04/1460632189_facebook.png);
+transform:translateY(7px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+position:relative;
+}
+
+.sub_ftre{
+  transform: translateX(20%);
+
+}
+
+#fb {
+  display: inline-block;
+transform:translate(10px, -50%);
+}
+
+#mailimg {
+display: inline-block;
+  width: 50px;
+  height: 50px;
+border-radius: 50%;
+background-color: white;
+  background-image:url(https://home.lps.org/cs/files/2017/12/Gmail-300x300.png);
+transform:translateY(7px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+position:relative;
+}
+
+.sub_fdue{
+  transform: translateX(20%);
+
+}
+
+#mail {
+  display: inline-block;
+transform:translate(10px, -50%);
+font-family: acumin-pro, "Helvetica Neue", Helvetica, Arial, メイリオ, Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+font-weight: bold;
+color: #ffffff;
+}
+
+#imgbehance {
+  display: inline-block;
+    width: 50px;
+    height: 50px;
+  border-radius: 50%;
+  background-color: white;
+    background-image:url(http://p14.zdassets.com/hc/settings_assets/14924/200002544/iWd3byBLJ142Vxd7Vf9B7w-BehanceLogoSquare.png);
+transform:translateY(7px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  position:relative;
+}
+
+.sub_funo{
+    transform: translateX(20%);
+
+}
+
+#bh {
+  display: inline-block;
+transform:translate(10px, -50%);
+}
+
+#atomimg {
+  display: inline-block;
+    width: 50px;
+    height: 50px;
+  border-radius: 50%;
+  background-color: white;
+    background-image:url(https://pbs.twimg.com/profile_images/876910193467998208/aL0gJ9_Y_400x400.jpg);
+transform:translateY(7px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  position:relative;
+}
+
+.sub_fterzo{
+  transform: translateX(20%);
+
+}
+
+#atom {
+  display: inline-block;
+transform:translate(10px, -50%);
+font-family: acumin-pro, "Helvetica Neue", Helvetica, Arial, メイリオ, Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+font-weight: bold;
+color: #ffffff;
+}
+
+
+.contenitore_footer a {
+  text-decoration: none;
+   font-family: acumin-pro, "Helvetica Neue", Helvetica, Arial, メイリオ, Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+font-weight: bolder;
+color: #ffffff;
+transition: color 0.1s ease-in-out;
+
+}
+
+.contenitore_footer a:hover {
+  text-decoration: none;
+   font-family: acumin-pro, "Helvetica Neue", Helvetica, Arial, メイリオ, Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+font-weight: bolder;
+color: #67c1f5;
+}
+
+.footerbasso{
+  position:relative;
+  width: 100vw;
+  max-width: 100%;
+         height: 50px;
+         background-color: #171a21;
+        bottom: 0;
+         left: 0;
+         right: 0;
+         position:relative;
+
+       padding-left: 8px;
+       padding-right: 8px;
+
+}
+
+.footerdisattivo{
+height: 0 !important;
+width: 100vw !important;
+max-width: 100% !important;
+font-size:0 !important;
+}
+
+.footerdisattivo div{
+height: 0 !important;
+width: 100vw !important;
+max-width: 100% !important;
+font-size:0 !important;
+}
+
+.footerdisattivo a{
+height: 0 !important;
+width: 100vw !important;
+max-width: 100% !important;
+font-size:0 !important;
+}
+
+
+.references:hover {
+  cursor: pointer;
+
+}
+
+
+.references {
+position: relative;
+  max-width: 72vw;
+  margin:0 auto;
+font-family: acumin-pro, "Helvetica Neue", Helvetica, Arial, メイリオ, Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+color: #ffffff;
+border-top: 1px solid #ffffff;
+top: 16px;
+text-align: center;
+font-weight: normal;
+font-size: 1.2em;
+}
+
+.footer_attivato {
 }
