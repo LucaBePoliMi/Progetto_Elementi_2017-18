@@ -59,22 +59,26 @@ function attiva_footer() {
 }
 
 function toggle_footer() {
-  if($(".contenitore_footer").hasClass("footerdisattivo")) {$(".contenitore_footer").addClass("footer_attivato");$(".contenitore_footer").removeClass("footerdisattivo")}
-else if($(".contenitore_footer").hasClass("footer_attivato")) {$(".contenitore_footer").addClass("footerdisattivo");$(".contenitore_footer").removeClass("footer_attivato")}
+  if($(".contenitore_footer").hasClass("footerdisattivo")) {$(".contenitore_footer").addClass("footer_attivato");$(".contenitore_footer").removeClass("footerdisattivo");$(".footerbasso").addClass("fuorischermo");$(".footerbasso").removeClass("basso")}
+else if($(".contenitore_footer").hasClass("footer_attivato")) {$(".contenitore_footer").addClass("footerdisattivo");$(".contenitore_footer").removeClass("footer_attivato");$(".footerbasso").addClass("basso");$(".footerbasso").removeClass("fuorischermo")}
 }
 
 
 
 
-// seconda versione attiva footer
-function secondo_attiva_footer() {
-  $(".footerbasso").removeClass("footerbasso_disattivo");$(".footerbasso").addClass("footerbasso_attivo");
-}
+
+
+
 
 
 
 $(".references").on("click", toggle_footer);
-$(".references").on("click", secondo_attiva_footer)
+
+
+
+
+
+
 // Immagini rendono azzurro il link
 function rendi_azzurro_link_uno() {
   $(".colore_azzurro_uno").addClass("link_azzurro");

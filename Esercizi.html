@@ -1,0 +1,726 @@
+<html>
+<head>
+
+<script src="jquery.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+
+
+
+/* ESERCIZIO SPINNER */
+
+
+
+@keyframes spin{
+  25% {transform: translateX(100px) translateY(100px)}
+  50% {transform: translateX(100px)}
+  75% {transform: translateY(100px)}
+
+}
+
+@keyframes spin2 {
+  0% {transform: rotate(0)}
+100% {transform: rotate(360deg)}
+}
+
+/*---------SPINNER---------*/
+
+@keyframes spin3 {
+  0% {transform: rotate(0)}
+100% {transform: rotate(180deg)}
+}
+
+@keyframes giro {
+  100% {transform: rotate(360deg)}
+
+}
+
+@keyframes azzurro {
+0% {transform: scale(0)}
+50% {transform: scale(1.0)}
+100% {transform: scale(0)}
+
+}
+
+
+#contenitore {
+border: 1px solid black;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 100px auto;
+  }
+  #spinner {
+    position: absolute;
+background-color: blue;
+height: 17px;
+width: 17px;
+animation: spin 3s infinite ease-in-out;
+  }
+
+  #contenitore2 {
+    position: relative;
+    border: 1px solid blue;
+    height: 100px;
+    width: 100px;
+    margin: 100px auto;
+  }
+
+  #spinner2 {
+    position: absolute;
+    background-color: purple;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+animation: spin2 3s linear infinite;
+  }
+
+
+  #angolo {
+    position: absolute;
+    background-color: yellow;
+    height: 35px;
+width: 35px;
+  }
+
+  #subcontenitore {
+
+  }
+
+/*---------SPINNER---------*/
+
+  #con3 {
+    position: relative;
+    margin: 100px auto;
+    border: 0 solid black;
+    height: 100px;
+    width: 100px;
+
+      animation: giro 3s infinite linear;
+
+  }
+
+/* NO
+.spinner3 {
+  animation: giro 10s infinite linear;
+}
+*/
+  .spinner3 div {
+    animation: spin3 1s infinite ease-in-out;
+    background-color: rgb(100,100,100);
+    position:absolute;
+    opacity: 0.75;
+
+  }
+
+  .centro {
+position: absolute;
+width: 80%;
+height: 80%;
+left: 10%;
+top: 10%;
+    background-color: rgb(100,100,255);
+    animation: azzurro 2s infinite;
+  }
+
+.block1 {
+  height: 100px;
+  width: 10px;
+}
+
+.block2 {
+  height: 10px;
+  width: 100px;
+}
+
+
+.blockright {
+right: 0;
+
+}
+
+blockright {
+  transform: translateX(80px);
+}
+
+.blockbottom {
+  bottom:0
+}
+
+blockbottom {
+  transform:translateY(80px);
+}
+
+/* FINE ESERCIZIO SPINNER */
+
+
+/* SIMPLE CAROUSEL */
+
+
+
+
+#freccia_sinistra.hover_sinistra {
+  position: absolute;
+
+
+  border-top: 15px solid purple;
+  border-left: 15px solid orange;
+  width: 100px;
+  height: 100px;
+  transform: translate(50px, 67px) rotate(-45deg);
+}
+
+#freccia_sinistra.no_hover_sinistra {
+position: absolute;
+
+
+border-top: 15px solid orange;
+border-left: 15px solid black;
+width: 100px;
+height: 100px;
+transform: translate(50px, 67px) rotate(-45deg);
+}
+
+
+
+#freccia_destra.hover_destra {
+position: absolute;
+
+
+border-top: 15px solid purple;
+border-right: 15px solid orange;
+width: 100px;
+height: 100px;
+transform: translate(-13px, 67px) rotate(45deg);
+}
+
+#freccia_destra.no_hover_destra {
+position: absolute;
+
+
+border-top: 15px solid orange;
+border-right: 15px solid black;
+width: 100px;/*100px*/
+height: 100px;/*100px*/
+transform: translate(-13px, 67px) rotate(45deg);
+}
+
+/*
+.verifica {
+position: absolute;
+border: 1px solid blue;
+height: 3px;
+width: 800px;
+top: 50vh;
+}
+*/
+
+#quadrato {
+position: absolute;
+width:33vw;/*400px*/
+height:33vw;/*400px*/
+top:50vh;
+left:50vw;
+transform: translate(-50%, -50%);
+}
+
+#quadrato.rosso {
+background-image: url(https://www.ilpost.it/wp-content/uploads/2017/05/grignani-londra-1972-Psicoplastica..jpg);
+ackground-color: red;
+}
+
+#quadrato.verde {
+background-image: url(https://www.ilpost.it/wp-content/uploads/2017/05/1952-Vetro-industriale.jpg);
+
+ackground-color: green;
+}
+
+#quadrato.blu {
+background-image: url(https://www.ilpost.it/wp-content/uploads/2017/05/grignani-londra-1956-Combinatoria-di-strutture-ondulate-interferenti.jpg);
+
+ackground-color: blue;
+}
+
+#quadrato.psicoplastica_ndue {
+background-image: url(https://www.ilpost.it/wp-content/uploads/2017/05/grignani-londra-1971-Psicoplastica..jpg);
+}
+
+#quadrato.psicoplastica_ntre{
+background-image:url(https://www.ilpost.it/wp-content/uploads/2017/05/grignani-londra-1970-Psicoplastica..jpg);
+}
+
+#quadrato.tensioni_simbiosi {
+background-image: url(https://www.ilpost.it/wp-content/uploads/2017/05/grignani-londra-tensioni-in-simbiosi-1964.jpg);
+}
+
+#quadrato.flou {
+background-image: url(https://www.ilpost.it/wp-content/uploads/2017/05/Grignani-londra-1955-Flou.jpg);
+}
+
+#quadrato.dissociaz_nuno {
+background-image:url(https://www.ilpost.it/wp-content/uploads/2017/05/grignani-londra-1967-Dissociazione-dal-bordo..jpg);
+}
+
+#quadrato.dissociaz_ndue {
+background-image: url(https://www.ilpost.it/wp-content/uploads/2017/05/grignani-londra-1967-Dissociazione-dal-bordo.jpg);
+}
+
+.centra_foto {
+background-repeat:no-repeat;
+background-size: contain;
+background-position: center;
+}
+
+.contenitore {
+position:absolute;
+background-color: purple;
+width: 12vw;/*150px*/
+height: 18vw;/*250px*/
+top: 50vh;
+transform: translateY(-125px)
+}
+
+
+.contenitore.con_sinistra {
+left: 20%;
+}
+
+.contenitore.con_destra {
+right: 20%;
+}
+
+
+
+
+
+/* FINE SIMPLE CAROUSEL */
+
+
+
+
+.posizione_esercizi {
+  position:relative;
+}
+
+.zindex {
+  z-index: 999 !important;
+}
+
+.spazio_header {
+height: 5vh;
+}
+
+.spazio_carousel {
+  height: 100vh;
+}
+
+.titoli_esercizi {
+
+}
+
+
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+<div class="zindex dietro_indice">
+<div class="zindex indice_due">
+  <div class="buttoninddiv aboutme scritteindice">
+    <a href="index.html" class="buttonind_am">About Me</a>
+   </div>
+  <div class="buttoninddiv portfolio scritteindice">
+    <a href="Progetti.html" class="buttonind_port">Portfolio</a>
+   </div>
+  <div class="buttoninddiv curriculum scritteindice">
+    <a href="Esercizi.html" class="buttonind_cur">Esercizi di codice</a>
+   </div>
+  <div class="buttoninddiv contatti scritteindice">
+    <a href=#con class="buttonind_con">Il Politecnico</a>
+   </div>
+
+</div>
+</div>
+<div class="zindex header">
+<div class="LB">LB</div>
+</div>
+
+
+<div class="spazio_header">
+</div>
+
+
+<!--ESERCIZIO SPINNER -->
+<div class="posizione_esercizi">
+<div id="contenitore">
+  <div id="spinner">
+
+</div>
+</div>
+
+<div id="contenitore2">
+  <div id="subcontenitore">
+<div id="spinner2">
+<div id="angolo">
+</div>
+</div>
+</div>
+</div>
+<!--SPINNER-->
+<div id="con3">
+<div class="centro"></div>
+<div class="spinner3">
+<div class="block1"></div>
+<div class="block1 blockright"></div>
+<div class="block2"></div>
+<div class="block2 blockbottom"></div>
+</div>
+</div>
+
+<div class="con4">
+</div>
+</div>
+
+<!-- FINE ESERCIZIO SPINNER -->
+
+<div class="titoli_esercizi">
+
+</div>
+<!-- SIMPLE CAROUSEL-->
+<div class="posizione_esercizi">
+<div class="contenitore con_sinistra">
+<div id="freccia_sinistra" class="no_hover_sinistra"></div>
+</div>
+<div class="contenitore con_destra">
+<div id="freccia_destra" class="no_hover_destra"></div>
+</div>
+<div class="verifica"></div>
+<div id="quadrato" class="blu centra_foto"></div>
+</div>
+<!-- FINE SIMPLE CAROUSEL -->
+
+
+
+
+<div class="spazio_carousel">
+</div>
+
+
+
+<div  class="footerdisattivo contenitore_footer">
+
+<div class="lineamezzo"></div>
+
+<div class="subcontenitore_footer_uno">
+
+<div class="foot funo">
+<div class="sub_funo">
+<a href="https://www.behance.net/lucab97d8e7">
+  <div class="icona_link img_azzurro_uno" id="imgbehance">
+  </div>
+</a>
+  <div id="bh" class="centratestofooter">
+<a class="colore_azzurro_uno testo_link" href="https://www.behance.net/lucab97d8e7">
+    Behance
+  </a>
+  </div>
+</div>
+</div>
+
+<div class="foot fdue">
+<div class="sub_fdue">
+  <div id="mailimg">
+  </div>
+  <div id="mail" class="centratestofooter">
+  luca.b97@gmail.com
+  </div>
+</div>
+</div>
+</div>
+
+<div class="lineamezzo"></div>
+
+<div class="subcontenitore_footer_due">
+<div class="foot fsecondo">
+<div class="sub_fsecondo">
+  <a href="https://it.pinterest.com/luca_bernardi/">
+    <div class="icona_link img_azzurro_due" id="imgpin">
+  </div>
+  </a>
+  <div id="pinterest" class="centratestofooter">
+  <a class="colore_azzurro_due testo_link" href="https://it.pinterest.com/luca_bernardi/">Pinterest</a>
+  </div>
+</div>
+</div>
+
+<div class="foot fterzo">
+<div class="sub_fterzo">
+
+<div class="icona_link img_azzurro_tre" id="atomimg">
+
+</div>
+
+<div id="atom" class="centratestofooter">
+
+
+luca1.bernardi@mail.polimi.it
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="lineamezzo"></div>
+
+<div class="subcontenitore_footer_tre">
+<div class="foot ftre">
+<div class="sub_ftre">
+  <a href="https://www.facebook.com/luca.bernardi.96">
+    <div class="icona_link img_azzurro_cinque" id="imgfb">
+    </div>
+  </a>
+  <div id="fb" class="centratestofooter">
+  <a class="colore_azzurro_cinque testo_link" href="https://www.facebook.com/luca.bernardi.96">Facebook</a>
+  </div>
+</div>
+</div>
+
+<div class="foot fquattro">
+<div class="sub_fquattro">
+<a href="https://github.com/LucaBePoliMi"><div class="icona_link img_azzurro_sei" id="imggit">
+</div></a>
+<div id="github" class="centratestofooter">
+<a class="colore_azzurro_sei testo_link" href="https://github.com/LucaBePoliMi">GitHub</a>
+</div>
+</div>
+</div>
+
+<div class="lineamezzo"></div>
+</div>
+</div>
+
+<div class="footerbasso footerbasso_disattivo">
+<div class="references">
+  <div class="linea_bianca">
+  Contatti
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<script src="appunti_04.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<!-- JAVASCRIPT DEL SIMPLE CAROUSEL -->
+
+<script>
+// FUNZIONI PER CAMBIO CLASSE
+
+
+
+
+function a_destra_blu() {
+  $("#quadrato").removeClass("verde");
+  $("#quadrato").addClass("blu")
+}
+
+function a_destra_psicoplastica_ndue() {
+  $("#quadrato").removeClass("blu");
+  $("#quadrato").addClass("psicoplastica_ndue")
+}
+
+function a_destra_psicoplastica_ntre() {
+$("#quadrato").removeClass("psicoplastica_ndue");
+$("#quadrato").addClass("psicoplastica_ntre")
+}
+
+function a_destra_tensioni_simbiosi() {
+  $("#quadrato").removeClass("psicoplastica_ntre");
+  $("#quadrato").addClass("tensioni_simbiosi")
+}
+
+function a_destra_flou() {
+  $("#quadrato").removeClass("tensioni_simbiosi");
+  $("#quadrato").addClass("flou")
+
+}
+
+function a_destra_dissociaz_nuno() {
+  $("#quadrato").removeClass("flou");
+  $("#quadrato").addClass("dissociaz_nuno")
+}
+
+function a_destra_dissociaz_ndue() {
+  $("#quadrato").removeClass("dissociaz_nuno");
+  $("#quadrato").addClass("dissociaz_ndue")
+}
+
+function a_destra_rosso() {
+  $("#quadrato").removeClass("dissociaz_ndue");
+  $("#quadrato").addClass("rosso")
+}
+
+// ESTREMO DI DESTRA DEL CAROUSEL
+
+function a_destra_verde() {
+$("#quadrato").removeClass("rosso");
+$("#quadrato").addClass("verde")
+}
+//
+
+
+
+function a_sinistra_dissociaz_ndue() {
+  $("#quadrato").removeClass("rosso");
+  $("#quadrato").addClass("dissociaz_ndue")
+}
+
+function a_sinistra_dissociaz_nuno() {
+  $("#quadrato").removeClass("dissociaz_ndue");
+  $("#quadrato").addClass("dissociaz_nuno")
+}
+
+function a_sinistra_flou() {
+  $("#quadrato").removeClass("dissociaz_nuno");
+  $("#quadrato").addClass("flou")
+}
+
+function a_sinistra_tensioni_simbiosi() {
+  $("#quadrato").removeClass("flou");
+  $("#quadrato").addClass("tensioni_simbiosi")
+}
+
+function a_sinistra_psicoplastica_ntre() {
+$("#quadrato").removeClass("tensioni_simbiosi");
+$("#quadrato").addClass("psicoplastica_ntre")
+}
+
+function a_sinistra_psicoplastica_ndue() {
+  $("#quadrato").removeClass("psicoplastica_ntre");
+  $("#quadrato").addClass("psicoplastica_ndue")
+}
+
+function a_sinistra_blu() {
+$("#quadrato").removeClass("psicoplastica_ndue");
+$("#quadrato").addClass("blu")
+}
+
+function a_sinistra_verde() {
+  $("#quadrato").removeClass("blu");
+  $("#quadrato").addClass("verde")
+}
+
+// ESTREMO DI SINISTRA DEL CAROUSEL
+
+function a_sinistra_rosso() {
+  $("#quadrato").removeClass("verde");
+  $("#quadrato").addClass("rosso")
+}
+//
+
+
+
+
+// FUNZIONI PER CLICK
+
+function click_destra() {
+  if($("#quadrato").hasClass("blu")) {a_destra_psicoplastica_ndue()}
+  else if($("#quadrato").hasClass("psicoplastica_ndue")) {a_destra_psicoplastica_ntre()}
+  else if($("#quadrato").hasClass("psicoplastica_ntre")) {a_destra_tensioni_simbiosi()}
+  else if($("#quadrato").hasClass("tensioni_simbiosi")) {a_destra_flou()}
+  else if($("#quadrato").hasClass("flou")) {a_destra_dissociaz_nuno()}
+  else if($("#quadrato").hasClass("dissociaz_nuno")) {a_destra_dissociaz_ndue()}
+  else if($("#quadrato").hasClass("dissociaz_ndue")) {a_destra_rosso()}
+  else if($("#quadrato").hasClass("rosso")) {a_destra_verde()}
+else if($("#quadrato").hasClass("verde")) {a_destra_blu()}
+}
+
+function click_sinistra() {
+  if($("#quadrato").hasClass("blu")) {a_sinistra_verde()}
+  else if($("#quadrato").hasClass("verde")) {a_sinistra_rosso()}
+  else if($("#quadrato").hasClass("rosso")) {a_sinistra_dissociaz_ndue()}
+  else if($("#quadrato").hasClass("dissociaz_ndue")) {a_sinistra_dissociaz_nuno()}
+  else if($("#quadrato").hasClass("dissociaz_nuno")) {a_sinistra_flou()}
+  else if($("#quadrato").hasClass("flou")) {a_sinistra_tensioni_simbiosi()}
+  else if($("#quadrato").hasClass("tensioni_simbiosi")) {a_sinistra_psicoplastica_ntre()}
+  else if($("#quadrato").hasClass("psicoplastica_ntre")) {a_sinistra_psicoplastica_ndue()}
+  else if($("#quadrato").hasClass("psicoplastica_ndue")) {a_sinistra_blu()}
+}
+
+// CAMBIO COLORE CONTENITORI
+
+var destra = document.querySelector(".con_destra")
+var frecciadest = document.querySelector(".freccia_destra")
+
+function cambia_colore_destra() {
+  destra.style.backgroundColor = "black"; $("#freccia_destra").removeClass("no_hover_destra");  $("#freccia_destra").addClass("hover_destra")
+}
+
+function torna_colore_destra() {
+  destra.style.backgroundColor = "purple"; $("#freccia_destra").removeClass("hover_destra");  $("#freccia_destra").addClass("no_hover_destra")
+}
+
+var sinistra = document.querySelector(".con_sinistra")
+
+function cambia_colore_sinistra() {
+  sinistra.style.backgroundColor = "black"; $("#freccia_sinistra").removeClass("no_hover_sinistra"); $("#freccia_sinistra").addClass("hover_sinistra")
+}
+
+function torna_colore_sinistra() {
+  sinistra.style.backgroundColor = "purple"; $("#freccia_sinistra").removeClass("hover_sinistra"); $("#freccia_sinistra").addClass("no_hover_sinistra")
+}
+
+sinistra.onmouseover = cambia_colore_sinistra
+
+sinistra.onmouseout = torna_colore_sinistra
+
+destra.onmouseover = cambia_colore_destra
+
+destra.onmouseout = torna_colore_destra
+
+
+
+// FUNZIONI ESEGUITE AL CLICK
+
+
+
+$(".con_sinistra").on("click", click_sinistra);
+
+$(".con_destra").on("click", click_destra);
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
