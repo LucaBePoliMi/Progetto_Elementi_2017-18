@@ -3,7 +3,7 @@
 
 <script src="jquery.js"></script>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,12 +16,12 @@
 
 
 
-@keyframes spin{
-  25% {transform: translateX(100px) translateY(100px)}
-  50% {transform: translateX(100px)}
-  75% {transform: translateY(100px)}
-
+@keyframes rotazioneoro {
+0% {transform: rotate(0)}
+100% {transform: rotate(360deg)}
 }
+
+
 
 @keyframes spin2 {
   0% {transform: rotate(0)}
@@ -57,11 +57,57 @@ border: 1px solid black;
   }
   #spinner {
     position: absolute;
-background-color: blue;
-height: 17px;
-width: 17px;
-animation: spin 3s infinite ease-in-out;
+background-color: #000;
+height: 100px;
+width: 100px;
+border-radius: 50%;
+/*animation: spin 3s infinite ease-in-out;*/
+
   }
+
+#baselancetta {
+  position: absolute;
+  left:50%;
+  top:50%;
+animation: rotazioneoro 1s linear infinite;
+}
+
+#baselancetta_due {
+  position:absolute;
+left:50%;
+  top:50%;
+  animation: rotazioneoro 4s linear infinite;
+}
+
+#lancetta_due {
+  position: absolute;
+  height:23px;
+  width:8px;
+  background-color: #66C0F4;
+transform:translateX(-50%);
+border-radius: 50%;
+}
+
+  #lancetta{
+    position: absolute;
+    height:45px;
+    width:8px;
+    background-color: #66C0F4;
+
+transform: translateX(-50%);
+bottom: 50%;
+border-radius: 50%;
+  }
+
+#centrooro {
+position: absolute;
+  width: 8px;
+  height: 8px;
+  top:46%;
+  left:46%;
+  background-color: #66C0F4;
+  border-radius: 50%;
+}
 
   #contenitore2 {
     position: relative;
@@ -74,18 +120,47 @@ animation: spin 3s infinite ease-in-out;
   #spinner2 {
     position: absolute;
     background-color: purple;
-    height: 75px;
-    width: 75px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
 animation: spin2 3s linear infinite;
   }
 
+@keyframes sferacontraria {
+  0% {transform: translate(50%, 50%) scale(2)}
+  50% {transform: translate(50%, 50%) scale(0)}
+  100% {transform: translate(50%, 50%) scale(2)}
+}
+@keyframes ruotaantiorario {
+  0% {transform: rotate(0)}
+  100% {transform: rotate(-360deg)}
+}
+
+
+#sferacontraria {
+  position:absolute;
+  background-color: green;
+  height:15px;
+  width:15px;
+  border-radius: 50%;
+  left:25%;
+  top:25%;
+  animation: sferacontraria 2s linear infinite;
+}
+
+#basesferacontraria {
+  position:absolute;
+  left:50%;
+  top:50%;
+  animation: ruotaantiorario 2s linear infinite;
+}
 
   #angolo {
     position: absolute;
     background-color: yellow;
-    height: 35px;
-width: 35px;
+    height: 17px;
+width: 17px;
+border-radius: 50%;
   }
 
   #subcontenitore {
@@ -144,70 +219,86 @@ right: 0;
 
 }
 
-blockright {
+/*
+.blockright {
   transform: translateX(80px);
 }
+*/
 
 .blockbottom {
   bottom:0
 }
 
-blockbottom {
+/*
+.blockbottom {
   transform:translateY(80px);
 }
+*/
 
 /* FINE ESERCIZIO SPINNER */
 
 
-/* SIMPLE CAROUSEL */
+/* CAROUSEL */
 
 
+#freccia_sinistra.hover_sinistra:hover{
+  cursor:pointer;
+}
 
+#freccia_sinistra.no_hover_sinistra:hover{
+  cursor:pointer;
+}
 
 #freccia_sinistra.hover_sinistra {
   position: absolute;
 
 
-  border-top: 15px solid purple;
-  border-left: 15px solid orange;
-  width: 100px;
-  height: 100px;
-  transform: translate(50px, 67px) rotate(-45deg);
+  border-top: 10px solid black;
+  border-left: 10px solid black;
+  width: 75px;
+  height: 75px;
+  transform: translate(39px, 47px) rotate(-45deg);
 }
 
 #freccia_sinistra.no_hover_sinistra {
 position: absolute;
 
 
-border-top: 15px solid orange;
-border-left: 15px solid black;
-width: 100px;
-height: 100px;
-transform: translate(50px, 67px) rotate(-45deg);
+border-top: 10px solid orange;
+border-left: 10px solid orange;
+width: 75px;
+height: 75px;
+transform: translate(39px, 47px) rotate(-45deg);
 }
 
+#freccia_destra.hover_destra:hover {
+cursor:pointer;
+}
 
+#freccia_destra.no_hover_destra:hover {
+cursor:pointer;
+}
 
 #freccia_destra.hover_destra {
 position: absolute;
 
 
-border-top: 15px solid purple;
-border-right: 15px solid orange;
-width: 100px;
-height: 100px;
-transform: translate(-13px, 67px) rotate(45deg);
+border-top: 10px solid black;
+border-right: 10px solid black;
+width: 75px;
+height: 75px;
+transform: translate(0px, 47px) rotate(45deg);
 }
 
 #freccia_destra.no_hover_destra {
 position: absolute;
 
 
-border-top: 15px solid orange;
-border-right: 15px solid black;
-width: 100px;/*100px*/
-height: 100px;/*100px*/
-transform: translate(-13px, 67px) rotate(45deg);
+border-top: 10px solid orange;
+border-right: 10px solid orange;
+width: 75px;/*100px*/
+height: 75px;/*100px*/
+transform: translate(0px, 47px) rotate(45deg);
 }
 
 /*
@@ -226,7 +317,7 @@ width:33vw;/*400px*/
 height:33vw;/*400px*/
 top:50vh;
 left:50vw;
-transform: translate(-50%, -50%);
+transform: translate(-53.5%, -50%);
 }
 
 #quadrato.rosso {
@@ -276,13 +367,17 @@ background-size: contain;
 background-position: center;
 }
 
+.contenitore:hover{
+  cursor:pointer;
+}
+
 .contenitore {
 position:absolute;
-background-color: purple;
-width: 12vw;/*150px*/
-height: 18vw;/*250px*/
+background-color: black;
+width: 9vw;/*150px*/
+height: 13vw;/*250px*/
 top: 50vh;
-transform: translateY(-125px)
+transform: translateY(-84px)
 }
 
 
@@ -298,9 +393,22 @@ right: 20%;
 
 
 
-/* FINE SIMPLE CAROUSEL */
+/* FINE CAROUSEL */
 
+.secondoback {
+position:absolute;
 
+background: -webkit-linear-gradient( top, rgba(103,193,245,1) 5%, rgba(103,193,245,0) 95%);
+height: 34px;
+width:128px;
+z-index: -1;
+transform: translate(-10px, -7px);
+border-radius: 3px;
+}
+
+.posizione_sezione{
+  background-color: #0d121a;
+}
 
 
 .posizione_esercizi {
@@ -338,6 +446,8 @@ height: 5vh;
 
 </head>
 <body>
+  <div id="bod" style="height: 1px;">
+  </div>
 
 
 
@@ -349,8 +459,11 @@ height: 5vh;
   <div class="buttoninddiv portfolio scritteindice">
     <a href="Progetti.html" class="buttonind_port">Portfolio</a>
    </div>
-  <div class="buttoninddiv curriculum scritteindice">
-    <a href="Esercizi.html" class="buttonind_cur">Esercizi di codice</a>
+  <div class="buttoninddiv curriculum scritteindice posizione_sezione">
+
+    <div class="bottoneesercizi secondoback">
+    </div>
+    <a href="Esercizi.html" class="buttonind_cur" style="color:#ffffff">Esercizi di codice</a>
    </div>
   <div class="buttoninddiv contatti scritteindice">
     <a href=#con class="buttonind_con">Il Politecnico</a>
@@ -359,7 +472,9 @@ height: 5vh;
 </div>
 </div>
 <div class="zindex header">
-<div class="LB">LB</div>
+  <a href="#bod">
+  <div class="LB"></div>
+  </a>
 </div>
 
 
@@ -370,16 +485,40 @@ height: 5vh;
 <!--ESERCIZIO SPINNER -->
 <div class="posizione_esercizi">
 <div id="contenitore">
+
   <div id="spinner">
 
+  </div>
+
+<div id="baselancetta_due">
+
+<div id="lancetta_due">
 </div>
+</div>
+
+<div id="centrooro">
+</div>
+
+<div id="baselancetta">
+<div id="lancetta">
+
+</div>
+</div>
+
+
+
 </div>
 
 <div id="contenitore2">
   <div id="subcontenitore">
+
 <div id="spinner2">
+
 <div id="angolo">
 </div>
+</div>
+<div id="basesferacontraria">
+<div id="sferacontraria"></div>
 </div>
 </div>
 </div>
@@ -432,12 +571,12 @@ height: 5vh;
 
 <div class="foot funo">
 <div class="sub_funo">
-<a href="https://www.behance.net/lucab97d8e7">
+<a href="https://www.behance.net/luca1berna11e1">
   <div class="icona_link img_azzurro_uno" id="imgbehance">
   </div>
 </a>
   <div id="bh" class="centratestofooter">
-<a class="colore_azzurro_uno testo_link" href="https://www.behance.net/lucab97d8e7">
+<a class="colore_azzurro_uno testo_link" href="https://www.behance.net/luca1berna11e1">
     Behance
   </a>
   </div>
@@ -678,21 +817,21 @@ var destra = document.querySelector(".con_destra")
 var frecciadest = document.querySelector(".freccia_destra")
 
 function cambia_colore_destra() {
-  destra.style.backgroundColor = "black"; $("#freccia_destra").removeClass("no_hover_destra");  $("#freccia_destra").addClass("hover_destra")
+  destra.style.backgroundColor = "orange"; $("#freccia_destra").removeClass("no_hover_destra");  $("#freccia_destra").addClass("hover_destra")
 }
 
 function torna_colore_destra() {
-  destra.style.backgroundColor = "purple"; $("#freccia_destra").removeClass("hover_destra");  $("#freccia_destra").addClass("no_hover_destra")
+  destra.style.backgroundColor = "black"; $("#freccia_destra").removeClass("hover_destra");  $("#freccia_destra").addClass("no_hover_destra")
 }
 
 var sinistra = document.querySelector(".con_sinistra")
 
 function cambia_colore_sinistra() {
-  sinistra.style.backgroundColor = "black"; $("#freccia_sinistra").removeClass("no_hover_sinistra"); $("#freccia_sinistra").addClass("hover_sinistra")
+  sinistra.style.backgroundColor = "orange"; $("#freccia_sinistra").removeClass("no_hover_sinistra"); $("#freccia_sinistra").addClass("hover_sinistra")
 }
 
 function torna_colore_sinistra() {
-  sinistra.style.backgroundColor = "purple"; $("#freccia_sinistra").removeClass("hover_sinistra"); $("#freccia_sinistra").addClass("no_hover_sinistra")
+  sinistra.style.backgroundColor = "black"; $("#freccia_sinistra").removeClass("hover_sinistra"); $("#freccia_sinistra").addClass("no_hover_sinistra")
 }
 
 sinistra.onmouseover = cambia_colore_sinistra

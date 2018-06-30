@@ -4,7 +4,7 @@
 
 <script src="jquery.js"></script>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
 
 <link rel="stylesheet" href="style.css">
 
@@ -28,20 +28,50 @@ margin:auto;
 }
 
 
+.secondoback {
+position:absolute;
+
+background: -webkit-linear-gradient( top, rgba(103,193,245,1) 5%, rgba(103,193,245,0) 95%);
+height: 34px;
+width:80px;
+z-index: -1;
+transform: translate(-10px, -7px);
+border-radius: 3px;
+}
+
+.posizione_sezione{
+  background-color: #0d121a;
+}
+
+
+
+
 </style>
 
 
 </head>
 
 <body>
+<div id="bod" style="height: 1px;">
+</div>
 
   <div id="fake_body">
 <div class="parallax"></div>
 <div class="dietro_indice">
 <div class="indice_due">
-  <div class="buttoninddiv aboutme scritteindice">
-    <a href="index.html" class="buttonind_am">About Me</a>
+
+
+
+  <div class="buttoninddiv aboutme scritteindice posizione_sezione">
+
+    <div class="bottoneabout secondoback">
+    </div>
+    <a href="index.html" class="buttonind_am" style="color:#ffffff;">About Me</a>
+
    </div>
+
+
+
   <div class="buttoninddiv portfolio scritteindice">
     <a href="Progetti.html" class="buttonind_port">Portfolio</a>
    </div>
@@ -55,7 +85,9 @@ margin:auto;
 </div>
 </div>
 <div class="header">
-<div class="LB">LB</div>
+<a href="#bod">
+<div class="LB"></div>
+</a>
 </div>
 
 <div class="sfondo_welcome">
