@@ -1,18 +1,23 @@
 body{
-/*
-    background-image: url(http://www.helwyssocietyforum.com/wp-content/uploads/2012/01/127-wood-wallpaper-dark-edition-1600x1200-customity.jpg);
+
+    background-image: url(http://celebwallpapers.net/wp-content/uploads/2018/02/free-background-images-for-websites-professional-background-for-websites-of-free-background-images-for-websites-professional.jpg);
 
 
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-*/
+
 height: 500px;
-
+/*
 background: #1b2838;
+*/
 
+}
 
+*::selection {
+  background-color: gold;
+  color: #111;  
 }
 
 
@@ -79,7 +84,7 @@ color:#ffffff;
 a.link_testo {
 text-decoration: none;
 color: rgb(70, 130, 180);
-border-bottom: 1px solid #eee;
+border-bottom: 1px solid #0d121a;
 transition: border-bottom-color 0.15s ease-in-out;
 }
 
@@ -168,7 +173,7 @@ background-size: contain;
 position: fixed;
   width: 100vw;
   height: 60px;
-  background-color: #223349;
+  background-color: rgb(18,18,18);
   top:60;
   left:0;
   right:0;
@@ -255,11 +260,16 @@ font-family: Arial, Helvetica, Verdana, sans-serif;
 
 }
 
+.contatti img {
+  width: 1.6vw;
+  transform: translate(-8%, 11%);
+}
 
 .dopoi {
-  background-color: #eee;
-  color: rgb(27, 40, 56);
-
+  background-color: #0d121a;
+  color: #acb2b8;
+padding-bottom: 3vh;
+  box-shadow: 0px -4px 100px -3px #000000;
 }
 
 .sfondo_welcome {
@@ -275,7 +285,8 @@ border-bottom-color: #1b2838;
 
  #am {
    margin-top: 0;
-  
+color: #5c8699;
+
  }
 
  .contenitore_footer {                     /*CONTENITORE FOOTER*/
@@ -588,6 +599,7 @@ font-size:0 !important;
 
 .references:hover {
   cursor: pointer;
+  color: #67c1f5;
 
 }
 
@@ -635,4 +647,14 @@ margin:auto;
 
 animation: foot_basso_trans 0.3s linear;
 
+}
+
+.titoli_sotto_header {
+  font-size: 2em;
+  max-width: 68vw;
+  margin:0 auto;
+font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+
+color: #eee;
+margin-bottom:2vh
 }
