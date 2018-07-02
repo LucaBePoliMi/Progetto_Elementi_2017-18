@@ -17,7 +17,7 @@ background: #1b2838;
 
 *::selection {
   background-color: gold;
-  color: #111;  
+  color: #111;
 }
 
 
@@ -71,7 +71,7 @@ color: #67c1f5 !important;
 .parallax {
 }
 
-.scritteindice a {             /*TUTTI GLI a CONTENUTI(DISCENDENTI) DA UN OGGETTO CON CLASSE scritteindice*/
+.indice_due a {             /*TUTTI GLI a CONTENUTI(DISCENDENTI) DA UN OGGETTO CON CLASSE scritteindice*/
 text-decoration: none;
 color:#939393;
 }
@@ -92,6 +92,10 @@ a.link_testo:hover {
 
 
 border-bottom-color: rgb(70, 130, 180);
+}
+
+a.patch:hover {
+  color: #ffffff
 }
 
 
@@ -217,11 +221,19 @@ padding-left:9px;
 padding-right:9px;
 border-radius: 3px;
 
-margin-left:6px;
-margin-right:6px;
+
 margin-top:16px;
 font-size: 14px;
 font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+
+.margine_indice{
+  width: 2px;
+  height: 36px;
+  position:relative;
+  display: inline-block;
+
 }
 
 .scritteindice_attivo {
@@ -233,8 +245,7 @@ padding-left:9px;
 padding-right:9px;
 border-radius: 3px;
 
-margin-left:6px;
-margin-right:6px;
+
 margin-top:16px;
 font-size: 14px;
 font-family: Arial, Helvetica, Verdana, sans-serif;
@@ -244,17 +255,29 @@ font-family: Arial, Helvetica, Verdana, sans-serif;
 
 }
 
+.bottone:hover {
+
+    color: #ffffff;
+
+}
+
 .aboutme {
 
 }
+
+
 
 .portfolio {
 
 }
 
+
+
 .curriculum {
 
 }
+
+
 
 .contatti {
 
@@ -317,6 +340,7 @@ display: inline-block;
   margin:0 auto;
 width:72vw;
 text-align: left;
+transform: translateX(1px)
 
 }
 
@@ -326,6 +350,7 @@ text-align: left;
   margin:0 auto;
 width:72vw;
 text-align: left;
+transform: translateX(1px)
 }
 
 .subcontenitore_footer_uno{
@@ -333,6 +358,7 @@ text-align: left;
   margin:0 auto;
 width: 72vw;
 text-align: left;
+transform: translateX(1px)
 }
 
 .funo{
@@ -384,7 +410,7 @@ width: 35.84vw;
     max-width: 72vw;
     margin:0 auto;
   width:72vw;
-  transform: translateX()
+  transform: translateX(1px)
 }
 
 .centratestofooter {
@@ -626,7 +652,7 @@ padding-bottom: 5px;
 position: relative;
   border-top: 1px solid #ffffff;
 width: 72vw;
-left: 0.6vw;
+left: 0.65vw;
 margin:auto;
 
 }
